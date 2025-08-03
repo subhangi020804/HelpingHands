@@ -3,13 +3,6 @@
 
 **Helping Hands** is a responsive, accessible, and visually appealing charity website dedicated to supporting underprivileged and differently-abled children. Built as a creative front-end project, it combines thoughtful design with modern web practices, featuring a floating heart animation, a modal-based sign-up form, and a Pinterest-inspired color palette.
 
-![Helping Hands Preview](screenshot.png) <!-- Replace or remove if not needed -->
-
-## 🌍 Live Demo
-[Click here to view the live site](https://your-github-username.github.io/helping-hands/)  
-(*replace with actual GitHub Pages URL*)
-
----
 
 ## ✨ Features
 
