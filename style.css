@@ -1,0 +1,285 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #fff8f6;
+  color: #3a3a3a;
+  line-height: 1.8;
+}
+
+/* Header */
+.site-header {
+  background-color: #ffe8e6;
+  padding: 60px 20px;
+  text-align: center;
+  color: #5b2b2b;
+}
+
+.site-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.site-header p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+  padding-bottom: 10px;
+}
+/* Site Header overall – reduce bottom padding if needed */
+.site-header {
+  padding-bottom: 10px;
+  padding-top: 40px; /* optional: shrink top space too */
+}
+
+/* Hero Section Container */
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 0;
+    padding: 30px 0;
+  }
+  
+/* Hero Image */
+.hero img {
+  width: 50%;
+  height: auto;          /* use natural height */
+  object-fit: cover;
+  border:10px solid #ffd0cb;
+  margin-top: 0;
+}
+/* Intro Section */
+.intro {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  font-size:120%;
+}
+.intro h2 {
+  font-size: 2rem;
+  color: #b64949;
+  margin-bottom: 20px;
+}
+
+/* Impact Section */
+.impact {
+  background-color: #fff0ed;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.impact h2 {
+  font-size: 2rem;
+  color: #b64949;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* CTA Section */
+.cta {
+  background-color: #ffd9d3;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  color: #4a2a2a;
+}
+
+.cta button {
+  background-color: #b64949;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.cta button:hover {
+  background-color: #933737;
+}
+
+/* Footer */
+.footer {
+  background-color: #4a2a2a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #ffd1cd;
+  text-decoration: none;
+}
+
+
+/* Popup Form */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  pointer-events: auto;
+  overflow: hidden;
+}
+
+.form-popup.active {
+  display: flex;
+}
+
+.form-container {
+  background-color: #fffefc;
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 10000;
+}
+.form-container h2 {
+  color: #b64949;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-container label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-container textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.form-container button[type="submit"] {
+  background-color: #b64949;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+.form-container .close-btn {
+  background-color: transparent;
+  color: #b64949;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 0.95rem;
+}
+/* Heart Base Style (keep as is) */
+.site-header,
+.hero,
+.intro,
+.form-popup {
+  position: relative;
+  z-index: 1;
+}
+.heart-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  bottom: -40px;
+  width: 25px;
+  height: 25px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' fill='%23ffb6b6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M256 464l-16-14.3C118.3 333.7 48 265.4 48 182.7 48 111.5 106.5 64 176.4 64c40.4 0 78.4 19.7 101.6 50.3C301.2 83.7 339.2 64 379.6 64 449.5 64 508 111.5 508 182.7c0 82.7-70.3 151-192 267L256 464z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: floatHeart linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Animate Each Heart with Unique Speed & Delay */
+.heart:nth-child(1) { left: 5%; animation-duration: 8s; animation-delay: 0s; }
+.heart:nth-child(2) { left: 12%; animation-duration: 10s; animation-delay: 1s; }
+.heart:nth-child(3) { left: 20%; animation-duration: 9s; animation-delay: 0.5s; }
+.heart:nth-child(4) { left: 30%; animation-duration: 7s; animation-delay: 2s; }
+.heart:nth-child(5) { left: 40%; animation-duration: 6s; animation-delay: 0s; }
+.heart:nth-child(6) { left: 50%; animation-duration: 9s; animation-delay: 1.5s; }
+.heart:nth-child(7) { left: 60%; animation-duration: 8s; animation-delay: 0.3s; }
+.heart:nth-child(8) { left: 70%; animation-duration: 10s; animation-delay: 0.7s; }
+.heart:nth-child(9) { left: 80%; animation-duration: 7s; animation-delay: 1s; }
+.heart:nth-child(10) { left: 85%; animation-duration: 6s; animation-delay: 2s; }
+.heart:nth-child(11) { left: 90%; animation-duration: 9s; animation-delay: 0.8s; }
+.heart:nth-child(12) { left: 95%; animation-duration: 7s; animation-delay: 1.2s; }
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.2);
+  }
+}
+
+
